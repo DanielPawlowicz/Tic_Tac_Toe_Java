@@ -1,3 +1,5 @@
+import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
@@ -18,6 +20,15 @@ public class Game implements ActionListener{
 	boolean player1Turn;
 	
 	Game(){
+		
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(800,800);
+		frame.getContentPane().setBackground(new Color(50,50,50));
+		frame.setLayout(new BorderLayout());
+		
+		
+		
+		frame.setVisible(true);
 		
 	}
 	
