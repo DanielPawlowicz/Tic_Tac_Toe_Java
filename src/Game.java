@@ -48,6 +48,7 @@ public class Game implements ActionListener{
 			buttons[i].setFont(new Font("Verdana", Font.BOLD, 120));
 			buttons[i].setFocusable(false);
 			buttons[i].addActionListener(this);
+			buttons[i].setEnabled(false);
 		}
 		
 		frame.add(buttonPanel);
@@ -102,6 +103,10 @@ public class Game implements ActionListener{
 		else {
 			player1Turn = false;
 			textField.setText("O turn");
+		}
+		
+		for(int i = 0; i < 9; i++) {
+			buttons[i].setEnabled(true);
 		}
 	}
 	
