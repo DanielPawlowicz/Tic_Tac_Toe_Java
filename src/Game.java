@@ -34,7 +34,11 @@ public class Game implements ActionListener{
 		textField.setText("Tic-Tac-Toe");
 		textField.setOpaque(true);
 		
-		frame.add(textField);
+		titlePanel.setLayout(new BorderLayout());
+		titlePanel.setBounds(0, 0, 800, 100);
+		titlePanel.add(textField);
+		
+		frame.add(titlePanel);
 		frame.setVisible(true);
 		
 	}
