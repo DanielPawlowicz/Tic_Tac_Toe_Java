@@ -61,6 +61,29 @@ public class Game implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
+		for(int i = 0; i < 9; i++) {
+			if(e.getSource()==buttons[i]) {
+				if(player1Turn) {
+					if(buttons[i].getText()=="") {
+						buttons[i].setForeground(new Color(255,0,0));
+						buttons[i].setText("X");
+						player1Turn = false;
+						textField.setText("O turn");
+						check();
+					}
+				}
+				else {
+					if(buttons[i].getText()=="") {
+						buttons[i].setForeground(new Color(0,0,255));
+						buttons[i].setText("O");
+						player1Turn = true;
+						textField.setText("X turn");
+						check();
+					}
+				}
+			}
+		}
+		
 	}
 	
 	public void firstTurn() {
