@@ -111,7 +111,7 @@ public class Game implements ActionListener{
 		if(
 				buttons[0].getText()=="X" &&
 				buttons[1].getText()=="X" && 
-				buttons[0].getText()=="X"
+				buttons[2].getText()=="X"
 				){
 			xWins(0,1,2);
 		}
@@ -136,7 +136,7 @@ public class Game implements ActionListener{
 		if(
 				buttons[0].getText()=="O" &&
 				buttons[1].getText()=="O" && 
-				buttons[0].getText()=="O"
+				buttons[2].getText()=="O"
 				){
 			oWins(0,1,2);
 		}
@@ -158,11 +158,25 @@ public class Game implements ActionListener{
 	}
 	
 	public void xWins(int a, int b, int c) {
+		buttons[a].setBackground(Color.GREEN);
+		buttons[b].setBackground(Color.GREEN);
+		buttons[c].setBackground(Color.GREEN);
 		
+		for(int i = 0; i < 9; i++) {
+			buttons[i].setEnabled(false);
+		}
+		textField.setText("X wins");
 	}
 	
 	public void oWins(int a, int b, int c) {
+		buttons[a].setBackground(Color.GREEN);
+		buttons[b].setBackground(Color.GREEN);
+		buttons[c].setBackground(Color.GREEN);
 		
+		for(int i = 0; i < 9; i++) {
+			buttons[i].setEnabled(false);
+		}
+		textField.setText("O wins");
 	}
 
 }
