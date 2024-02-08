@@ -1,6 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
@@ -38,6 +39,10 @@ public class Game implements ActionListener{
 		titlePanel.setBounds(0, 0, 800, 100);
 		titlePanel.add(textField);
 		
+		buttonPanel.setLayout(new GridLayout(3,3));
+		buttonPanel.setBackground(new Color(150,150,150));
+		
+		frame.add(buttonPanel);
 		frame.add(titlePanel, BorderLayout.NORTH);
 		frame.setVisible(true);
 		
