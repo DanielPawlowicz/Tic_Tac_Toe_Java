@@ -38,7 +38,7 @@ public class Game implements ActionListener{
 		titlePanel.setBounds(0, 0, 800, 100);
 		titlePanel.add(textField);
 		
-		frame.add(titlePanel);
+		frame.add(titlePanel, BorderLayout.NORTH);
 		frame.setVisible(true);
 		
 	}
