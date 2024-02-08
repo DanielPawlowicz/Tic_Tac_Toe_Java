@@ -64,6 +64,14 @@ public class Game implements ActionListener{
 	}
 	
 	public void firstTurn() {
+		
+		try {
+			Thread.sleep(1500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		if(random.nextInt(2)==0) {
 			player1Turn = true;
 			textField.setText("X turn");
