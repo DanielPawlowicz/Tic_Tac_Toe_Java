@@ -1,5 +1,6 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
@@ -26,8 +27,14 @@ public class Game implements ActionListener{
 		frame.getContentPane().setBackground(new Color(50,50,50));
 		frame.setLayout(new BorderLayout());
 		
+		textField.setBackground(new Color(25,25,25));
+		textField.setForeground(new Color(25,250,0));
+		textField.setFont(new Font("Verdane", Font.BOLD,75));
+		textField.setHorizontalAlignment(JLabel.CENTER);
+		textField.setText("Tic-Tac-Toe");
+		textField.setOpaque(true);
 		
-		
+		frame.add(textField);
 		frame.setVisible(true);
 		
 	}
