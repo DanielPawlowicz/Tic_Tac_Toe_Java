@@ -54,6 +54,7 @@ public class Game implements ActionListener{
 		frame.add(titlePanel, BorderLayout.NORTH);
 		frame.setVisible(true);
 		
+		firstTurn();
 	}
 	
 	@Override
@@ -63,7 +64,14 @@ public class Game implements ActionListener{
 	}
 	
 	public void firstTurn() {
-		
+		if(random.nextInt(2)==0) {
+			player1Turn = true;
+			textField.setText("X turn");
+		}
+		else {
+			player1Turn = false;
+			textField.setText("O turn");
+		}
 	}
 	
 	public void check() {
